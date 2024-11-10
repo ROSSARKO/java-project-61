@@ -15,7 +15,7 @@ public class Progression {
 
         Engine.userGreetings();
         System.out.println("What number is missing in the progression?");
-        while (Engine.questionCounter != Engine.MAX_QUESTIONS) {
+        while (Engine.getQuestionCounter() != Engine.getMaxQuestions()) {
             int progressionStep = randNum.nextInt(1, stepMax);
             int randHideElement = randNum.nextInt(0, hideElementMax);
             int firstNum = randNum.nextInt(1, firstNumMax);
@@ -37,16 +37,16 @@ public class Progression {
 
             if (answer == hideElement) {
                 System.out.println("Correct!\n");
-                Engine.questionCounter++;
+                Engine.incrementQuestionsCounter();
             } else {
                 System.out.println("Your answer: " + answer);
                 System.out.println("'" + answer + "'" + "is wrong answer ;(. "
                         + "Correct answer was" + "'" + hideElement + "'");
-                System.out.println("Let's try again, " + Engine.userName + "!");
+                System.out.println("Let's try again, " + Engine.getUserName() + "!");
                 break;
             }
-            if (Engine.questionCounter == Engine.MAX_QUESTIONS) {
-                System.out.println("Congratulations, " + Engine.userName + "!");
+            if (Engine.getQuestionCounter() == Engine.getMaxQuestions()) {
+                System.out.println("Congratulations, " + Engine.getUserName() + "!");
             }
         }
 

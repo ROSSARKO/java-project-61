@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Engine {
-    public static String userName = "";
-    public static int questionCounter = 0;
-    public static final int MAX_QUESTIONS = 3;
+    private static String userName = "";
+    private static int questionCounter = 0;
+    private static final int MAX_QUESTIONS = 3;
 
     public static void userGreetings() {
         Scanner sc = new Scanner(System.in);
@@ -46,4 +46,20 @@ public class Engine {
         }
         return a;
     }
+    public static String getUserName(){
+        return userName;
+    }
+    public static int getMaxQuestions() {
+        return MAX_QUESTIONS;
+    }
+    public static int getQuestionCounter() {
+        return questionCounter;
+    }
+    public static void setQuestionCounter(int newValue) {
+        questionCounter = newValue;
+    }
+    public static void incrementQuestionsCounter() {
+        questionCounter++;
+    }
+
 }

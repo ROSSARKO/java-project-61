@@ -8,24 +8,24 @@ public class EvenGame {
         Scanner sc = new Scanner(System.in);
         Engine.userGreetings();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        while (Engine.questionCounter != Engine.MAX_QUESTIONS) {
+        while (Engine.getQuestionCounter() != Engine.getMaxQuestions()) {
             Random rand = new Random();
             int randNum = rand.nextInt(rndMax);
             System.out.println("Question: " + randNum);
             System.out.print("Your answer: ");
             String answer = sc.next();
             if (randNum % 2 == 0 && answer.equals("yes")) {
-                System.out.println("Correct! " + Engine.userName + "\n");
-                Engine.questionCounter++;
+                System.out.println("Correct! " + Engine.getUserName() + "\n");
+                Engine.incrementQuestionsCounter();
             } else if (randNum % 2 != 0 && answer.equals("no")) {
                 System.out.println("Correct!\n");
-                Engine.questionCounter++;
+                Engine.incrementQuestionsCounter();
             } else {
-                System.out.println("Let's try again, " + Engine.userName + "!");
+                System.out.println("Let's try again, " + Engine.getUserName() + "!");
                 break;
             }
-            if (Engine.questionCounter == Engine.MAX_QUESTIONS) {
-                System.out.println("Congratulations, " + Engine.userName + "!");
+            if (Engine.getQuestionCounter() == Engine.getMaxQuestions()) {
+                System.out.println("Congratulations, " + Engine.getUserName() + "!");
             }
         }
     }

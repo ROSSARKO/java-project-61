@@ -10,7 +10,7 @@ public class GCD {
         System.out.println("Find the greatest common divisor of given numbers.");
         Scanner sc = new Scanner(System.in);
         int result;
-        while (Engine.questionCounter != Engine.MAX_QUESTIONS) {
+        while (Engine.getQuestionCounter() != Engine.getMaxQuestions()) {
             Random randNum = new Random();
             int num1 = randNum.nextInt(maxValue);
             int num2 = randNum.nextInt(maxValue);
@@ -19,16 +19,16 @@ public class GCD {
             result = Engine.gcdGenerate(num1, num2);
             if (answer == result) {
                 System.out.println("Correct!\n");
-                Engine.questionCounter++;
+                Engine.incrementQuestionsCounter();
             } else {
                 System.out.println("Your answer: " + answer);
                 System.out.println("'" + answer + "'" + "is wrong answer ;(. "
                         + "Correct answer was" + "'" + result + "'");
-                System.out.println("Let's try again, " + Engine.userName + "!");
+                System.out.println("Let's try again, " + Engine.getUserName() + "!");
                 break;
             }
-            if (Engine.questionCounter == Engine.MAX_QUESTIONS) {
-                System.out.println("Congratulations, " + Engine.userName + "!");
+            if (Engine.getQuestionCounter() == Engine.getMaxQuestions()) {
+                System.out.println("Congratulations, " + Engine.getUserName() + "!");
             }
         }
     }

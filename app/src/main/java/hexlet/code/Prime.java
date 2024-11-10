@@ -10,7 +10,7 @@ public class Prime {
         Random randNum = new Random();
         Engine.userGreetings();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        while (Engine.questionCounter != Engine.MAX_QUESTIONS) {
+        while (Engine.getQuestionCounter() != Engine.getMaxQuestions()) {
             int num = randNum.nextInt(2, rndMax);
             boolean isPrime = true;
             System.out.println("Question: " + num);
@@ -24,16 +24,16 @@ public class Prime {
             String answer = sc.next();
             if (answer.equals("yes") && isPrime) {
                 System.out.println("Correct!");
-                Engine.questionCounter++;
+                Engine.incrementQuestionsCounter();
             } else if (answer.equals("no") && !isPrime) {
                 System.out.println("Correct!");
-                Engine.questionCounter++;
+                Engine.incrementQuestionsCounter();
             } else {
-                System.out.println("Let's try again, " + Engine.userName + "!");
+                System.out.println("Let's try again, " + Engine.getUserName() + "!");
                 break;
             }
-            if (Engine.questionCounter == Engine.MAX_QUESTIONS) {
-                System.out.println("Congratulations, " + Engine.userName + "!");
+            if (Engine.getQuestionCounter() == Engine.getMaxQuestions()) {
+                System.out.println("Congratulations, " + Engine.getUserName() + "!");
             }
         }
     }
