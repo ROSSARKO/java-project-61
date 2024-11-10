@@ -7,12 +7,11 @@ public class Prime {
     public static void gameLogic() {
         Scanner sc = new Scanner(System.in);
         Random randNum = new Random();
-        boolean isPrime = true;
         Engine.userGreetings();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         while (Engine.questionCounter != 3) {
             int num = randNum.nextInt(2, 1000);
-            isPrime = true;
+            boolean isPrime = true;
             System.out.println("Question: " + num);
             for (int i = 2; i <= Math.sqrt(num); i++) {
                 if (num % i == 0) {
