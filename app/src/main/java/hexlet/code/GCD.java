@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class GCD {
     public static void gameLogic() {
         Engine.userGreetings();
-        System.out.println("Find the greatest common divisor of given numbers");
+        System.out.println("Find the greatest common divisor of given numbers.");
         Scanner sc = new Scanner(System.in);
         int result;
         while (Engine.questionCounter != 3) {
