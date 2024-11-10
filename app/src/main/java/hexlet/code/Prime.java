@@ -30,7 +30,7 @@ public class Prime {
                 System.out.println("This is not correct answer,try again!\n");
             }
             if(Engine.questionCounter == 3) {
-                System.out.println("Congratulations! " + Engine.userName);
+                System.out.println("Congratulations, " + Engine.userName + "!");
             }
         }
     }
