@@ -28,29 +28,14 @@ public class Engine {
         System.out.println(formattedGamesList);
         int gameNumber = sc.nextInt();
         switch (gameNumber) {
-            case 0:
-                System.console();
-                break;
-            case 1:
-                Cli.userGreeting();
-                break;
-            case 2:
-                EvenGame.gameLogic();
-                break;
-            case 3:
-                Calc.gameLogic();
-                break;
-            case 4:
-                GCD.gameLogic();
-                break;
-            case 5:
-                Progression.gameLogic();
-                break;
-            case 6:
-                Prime.gameLogic();
-                break;
-            default:
-                System.console();
+            case 0-> System.console();
+            case 1 -> Cli.userGreeting();
+            case 2 -> EvenGame.gameLogic();
+            case 3 -> Calc.gameLogic();
+            case 4 -> GCD.gameLogic();
+            case 5 -> Progression.gameLogic();
+            case 6 -> Prime.gameLogic();
+            default -> System.console();
         }
     }
 

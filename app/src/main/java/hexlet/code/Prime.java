@@ -5,13 +5,13 @@ import java.util.Scanner;
 
 public class Prime {
     public static void gameLogic() {
-        final int RND_NUM_MAX = 1000;
+        final int rndMax = 1000;
         Scanner sc = new Scanner(System.in);
         Random randNum = new Random();
         Engine.userGreetings();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         while (Engine.questionCounter != Engine.MAX_QUESTIONS) {
-            int num = randNum.nextInt(2, RND_NUM_MAX);
+            int num = randNum.nextInt(2, rndMax);
             boolean isPrime = true;
             System.out.println("Question: " + num);
             for (int i = 2; i <= Math.sqrt(num); i++) {

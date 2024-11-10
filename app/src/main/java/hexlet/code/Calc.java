@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class Calc {
     public static void gameLogic() {
-        final int RND_MAX_VALUE = 100;
-        final int MATH_SYMBOL_MAX_VALUE = 3;
+        final int rndMax = 100;
+        final int mathSymbolMax = 3;
         Engine.userGreetings();
         Scanner sc = new Scanner(System.in);
         char[] mathSymbols = {'+', '-', '*'};
@@ -14,9 +14,9 @@ public class Calc {
         System.out.println("What is the result of the expression?\n");
         while (Engine.questionCounter != Engine.MAX_QUESTIONS) {
             Random randNum = new Random();
-            int randMathSymbol = randNum.nextInt(MATH_SYMBOL_MAX_VALUE);
-            int num1 = randNum.nextInt(RND_MAX_VALUE);
-            int num2 = randNum.nextInt(RND_MAX_VALUE);
+            int randMathSymbol = randNum.nextInt(mathSymbolMax);
+            int num1 = randNum.nextInt(rndMax);
+            int num2 = randNum.nextInt(rndMax);
             System.out.println("Question: " + num1 + " " + mathSymbols[randMathSymbol] + " " + num2);
             result = switch (mathSymbols[randMathSymbol]) {
                 case '+' -> num1 + num2;
