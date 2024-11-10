@@ -5,3 +5,5 @@ Video: CalcGame
 https://asciinema.org/a/dSpSj9hkaShOIxZhzhbgw7bv3
 Video: GCD
 https://asciinema.org/a/egT7j4lie7pqZfF5hKfNLVjDy
+Video: Progression
+https://asciinema.org/a/yHUW0ER66ENJNQpuoWibP75ak
