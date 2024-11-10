@@ -30,6 +30,7 @@ public class Calc {
                 System.out.println("Your answer: " + answer);
                 System.out.println("'" + answer + "'" + "is wrong answer ;(. "
                         + "Correct answer was" + "'" + result + "'");
+                break;
             }
             if (Engine.questionCounter == 3) {
                 System.out.println("Congratulations, " + Engine.userName + "!");
