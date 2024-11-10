@@ -7,7 +7,7 @@ public class Calc {
     public static void gameLogic() {
         Engine.userGreetings();
         Scanner sc = new Scanner(System.in);
-        char[] mathSymbols = {'+','-','*'};
+        char[] mathSymbols = {'+', '-', '*'};
         int result = 0;
         System.out.println("What is the result of the expression?\n");
         while (Engine.questionCounter != 3) {
@@ -28,10 +28,10 @@ public class Calc {
                 Engine.questionCounter++;
             } else {
                 System.out.println("Your answer: " + answer);
-                System.out.println("'" + answer + "'" + "is wrong answer ;(. " +
-                        "Correct answer was" + "'" + result + "'");
+                System.out.println("'" + answer + "'" + "is wrong answer ;(. "
+                        + "Correct answer was" + "'" + result + "'");
             }
-            if(Engine.questionCounter == 3) {
+            if (Engine.questionCounter == 3) {
                 System.out.println("Congratulations, " + Engine.userName + "!");
             }
 
