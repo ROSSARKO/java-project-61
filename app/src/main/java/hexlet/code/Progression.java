@@ -28,7 +28,7 @@ public class Progression {
                     progressionWithDots[i] = String.valueOf(progression[i]);
                 }
             }
-            System.out.println(String.join(" ", progressionWithDots));
+            System.out.println("Question: " + String.join(" ", progressionWithDots));
             int answer = sc.nextInt();
 
             if (answer == hideElement) {
