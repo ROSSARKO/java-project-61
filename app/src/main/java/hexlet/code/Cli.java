@@ -1,7 +1,11 @@
 package hexlet.code;
 
+import java.util.Scanner;
+
 public class Cli {
     public static void userGreeting() {
-        Engine.userGreetings();
+        Scanner sc = new Scanner(System.in);
+        String userName = sc.next();
+        System.out.println("Hello " + userName + "!");
     }
 }
