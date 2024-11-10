@@ -11,6 +11,7 @@ public class EvenGame {
             Random rand = new Random();
             int randNum = rand.nextInt(100);
             System.out.println("Question: " + randNum);
+            System.out.print("Your answer: ");
             String answer = sc.next();
             if(randNum % 2 == 0 && answer.equals("yes")) {
                 System.out.println("Correct! " + Engine.userName + "\n");
