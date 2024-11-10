@@ -8,7 +8,7 @@ public class Engine {
     public static int questionCounter = 0;
     public static void userGreetings() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome to the Brain Games!\nMay I have your name?\n");
+        System.out.println("Welcome to the Brain Games!\nMay I have your name?");
         userName = sc.next();
         System.out.println("Hello " + userName + "!");
     }
