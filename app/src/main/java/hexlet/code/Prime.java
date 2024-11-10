@@ -19,12 +19,13 @@ public class Prime {
                     break;
                 }
             }
+            System.out.print("Your answer: ");
             String answer = sc.next();
             if (answer.equals("yes") && isPrime) {
-                System.out.println("Correct!\n");
+                System.out.println("Correct!");
                 Engine.questionCounter++;
             } else if (answer.equals("no") && !isPrime) {
-                System.out.println("Correct!\n");
+                System.out.println("Correct!");
                 Engine.questionCounter++;
             } else {
                 System.out.println("Let's try again, " + Engine.userName + "!");
