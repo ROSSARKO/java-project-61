@@ -10,7 +10,7 @@ public class Engine {
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!\nMay I have your name?\n");
         userName = sc.next();
-        System.out.println("Hello " + userName + "\n");
+        System.out.println("Hello " + userName + "!");
     }
     public static void selectGame() {
         String[] gamesList = {"1 - Greet", "2 - Even", "3 - Calc", "4 - GCD",
