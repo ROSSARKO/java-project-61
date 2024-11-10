@@ -23,6 +23,7 @@ public class GCD {
                 System.out.println("Your answer: " + answer);
                 System.out.println("'" + answer + "'" + "is wrong answer ;(. "
                         + "Correct answer was" + "'" + result + "'");
+                System.out.println("Let's try again, " + Engine.userName + "!");
                 break;
             }
             if (Engine.questionCounter == 3) {

@@ -27,7 +27,7 @@ public class Prime {
                 System.out.println("Correct!\n");
                 Engine.questionCounter++;
             } else {
-                System.out.println("This is not correct answer,try again!\n");
+                System.out.println("Let's try again, " + Engine.userName + "!");
                 break;
             }
             if (Engine.questionCounter == 3) {
