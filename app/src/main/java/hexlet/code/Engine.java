@@ -1,6 +1,7 @@
 package hexlet.code;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
@@ -13,7 +14,8 @@ public class Engine {
         System.out.println("Hello " + userName + "\n");
     }
     public static void selectGame() {
-        String[] gamesList = {"1 - Greet", "2 - Even", "3 - Calc", "4 - GCD", "0 - Exit"};
+        String[] gamesList = {"1 - Greet", "2 - Even", "3 - Calc", "4 - GCD",
+                "5 - Progression", "0 - Exit"};
         Scanner sc = new Scanner(System.in);
         String formattedGamesList = Arrays.toString(gamesList)
                 .replace("[","")
@@ -33,6 +35,8 @@ public class Engine {
             case 3: Calc.gameLogic();
                 break;
             case 4: GCD.gameLogic();
+                break;
+            case 5: Progression.gameLogic();
                 break;
         }
     }
