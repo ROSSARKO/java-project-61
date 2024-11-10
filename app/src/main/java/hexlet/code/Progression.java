@@ -23,7 +23,7 @@ public class Progression {
             String[] progressionWithDots = new String[progression.length];
             for (int i = 0; i < progression.length; i++) {
                 if (i == randHideElement) {
-                    progressionWithDots[i] = "...";
+                    progressionWithDots[i] = "..";
                 } else {
                     progressionWithDots[i] = String.valueOf(progression[i]);
                 }
