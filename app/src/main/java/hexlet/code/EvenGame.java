@@ -13,7 +13,7 @@ public class EvenGame {
             System.out.println("Question: " + randNum);
             System.out.print("Your answer: ");
             String answer = sc.next();
-            if(randNum % 2 == 0 && answer.equals("yes")) {
+            if (randNum % 2 == 0 && answer.equals("yes")) {
                 System.out.println("Correct! " + Engine.userName + "\n");
                 Engine.questionCounter++;
             } else if (randNum % 2 != 0 && answer.equals("no")) {
@@ -21,8 +21,9 @@ public class EvenGame {
                 Engine.questionCounter++;
             } else {
                 System.out.println("Let's try again, " + Engine.userName + "!");
+                break;
             }
-            if(Engine.questionCounter == 3) {
+            if (Engine.questionCounter == 3) {
                 System.out.println("Congratulations, " + Engine.userName + "!");
             }
         }
