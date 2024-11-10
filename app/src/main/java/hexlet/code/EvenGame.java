@@ -19,7 +19,7 @@ public class EvenGame {
                 System.out.println("Correct!\n");
                 Engine.questionCounter++;
             } else {
-                System.out.println("Let's try again! " + Engine.userName + "\n");
+                System.out.println("Let's try again, " + Engine.userName + "!");
             }
             if(Engine.questionCounter == 3) {
                 System.out.println("Congratulations, " + Engine.userName + "!");
