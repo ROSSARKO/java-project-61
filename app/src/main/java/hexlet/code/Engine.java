@@ -16,8 +16,7 @@ public class Engine {
     }
 
     public static void selectGame() {
-        String[] gamesList = {"1 - Greet", "2 - Even", "3 - Calc", "4 - GCD",
-                "5 - Progression", "6 - Prime", "0 - Exit"};
+        String[] gamesList = {"1 - Greet", "2 - Even", "3 - Calc", "4 - GCD", "5 - Progression", "6 - Prime", "0 - Exit"};
         Scanner sc = new Scanner(System.in);
         String formattedGamesList = Arrays.toString(gamesList)
                 .replace("[", "")
@@ -28,7 +27,7 @@ public class Engine {
         System.out.println(formattedGamesList);
         int gameNumber = sc.nextInt();
         switch (gameNumber) {
-            case 0-> System.console();
+            case 0 -> System.console();
             case 1 -> Cli.userGreeting();
             case 2 -> EvenGame.gameLogic();
             case 3 -> Calc.gameLogic();

@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 public class EvenGame {
     public static void gameLogic() {
+        final int rndMax = 100;
         Scanner sc = new Scanner(System.in);
         Engine.userGreetings();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         while (Engine.questionCounter != Engine.MAX_QUESTIONS) {
             Random rand = new Random();
-            int randNum = rand.nextInt(100);
+            int randNum = rand.nextInt(rndMax);
             System.out.println("Question: " + randNum);
             System.out.print("Your answer: ");
             String answer = sc.next();
