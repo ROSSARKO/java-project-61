@@ -12,17 +12,17 @@ public class Progression {
         Engine.userGreetings();
         System.out.println("What number is missing in the progression?");
         while (Engine.questionCounter != 3) {
-            int progressionStep = randNum.nextInt(1,10);
-            int randHideElement= randNum.nextInt(0,9);
-            int firstNum = randNum.nextInt(1,100);
+            int progressionStep = randNum.nextInt(1, 10);
+            int randHideElement = randNum.nextInt(0, 9);
+            int firstNum = randNum.nextInt(1, 100);
             progression[0] = firstNum;
-            for(int i = 1; i < progression.length; i++) {
+            for (int i = 1; i < progression.length; i++) {
                 progression[i] = progression[i - 1] + progressionStep;
             }
             int hideElement = progression[randHideElement];
             String[] progressionWithDots = new String[progression.length];
-            for(int i = 0; i < progression.length; i++) {
-                if(i == randHideElement) {
+            for (int i = 0; i < progression.length; i++) {
+                if (i == randHideElement) {
                     progressionWithDots[i] = "...";
                 } else {
                     progressionWithDots[i] = String.valueOf(progression[i]);
@@ -36,10 +36,11 @@ public class Progression {
                 Engine.questionCounter++;
             } else {
                 System.out.println("Your answer: " + answer);
-                System.out.println("'" + answer + "'" + "is wrong answer ;(. " +
-                        "Correct answer was" + "'" + hideElement + "'");
+                System.out.println("'" + answer + "'" + "is wrong answer ;(. "
+                        + "Correct answer was" + "'" + hideElement + "'");
+                break;
             }
-            if(Engine.questionCounter == 3) {
+            if (Engine.questionCounter == 3) {
                 System.out.println("Congratulations, " + Engine.userName + "!");
             }
         }
