@@ -11,10 +11,10 @@ public class Prime {
         Engine.userGreetings();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         while (Engine.questionCounter != 3) {
-            int num = randNum.nextInt(2,1000);
+            int num = randNum.nextInt(2, 1000);
             System.out.println("Question: " + num);
             for (int i = 2; i <= Math.sqrt(num); i++) {
-                if(num % i == 0) {
+                if (num % i == 0) {
                     isPrime = false;
                     break;
                 }
@@ -28,8 +28,9 @@ public class Prime {
                 Engine.questionCounter++;
             } else {
                 System.out.println("This is not correct answer,try again!\n");
+                break;
             }
-            if(Engine.questionCounter == 3) {
+            if (Engine.questionCounter == 3) {
                 System.out.println("Congratulations, " + Engine.userName + "!");
             }
         }
