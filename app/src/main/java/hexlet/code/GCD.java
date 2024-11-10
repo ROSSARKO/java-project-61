@@ -8,7 +8,7 @@ public class GCD {
         Engine.userGreetings();
         System.out.println("Find the greatest common divisor of given numbers");
         Scanner sc = new Scanner(System.in);
-        int result = 0;
+        int result;
         while (Engine.questionCounter != 3) {
             Random randNum = new Random();
             int num1 = randNum.nextInt(100);
