@@ -7,6 +7,13 @@ public class Engine {
     private static String userName = "";
     private static int questionCounter = 0;
     private static final int MAX_QUESTIONS = 3;
+    private static final int STAT_GREET = 0;
+    private static final int STAT_EVEN = 1;
+    private static final int STAT_CALC = 2;
+    private static final int STAT_GCD = 3;
+    private static final int STAT_PROGRESSION= 4;
+    private static final int STAT_PRIME = 5;
+    private static final int STAT_EXIT = 6;
 
     public static void userGreetings() {
         Scanner sc = new Scanner(System.in);
@@ -16,7 +23,8 @@ public class Engine {
     }
 
     public static void selectGame() {
-        String[] gamesList = {"1 - Greet", "2 - Even", "3 - Calc", "4 - GCD", "5 - Progression", "6 - Prime", "0 - Exit"};
+        String[] gamesList = {"1 - Greet", "2 - Even", "3 - Calc", "4 - GCD",
+                "5 - Progression", "6 - Prime", "0 - Exit"};
         Scanner sc = new Scanner(System.in);
         String formattedGamesList = Arrays.toString(gamesList)
                 .replace("[", "")
@@ -27,13 +35,13 @@ public class Engine {
         System.out.println(formattedGamesList);
         int gameNumber = sc.nextInt();
         switch (gameNumber) {
-            case 0 -> System.console();
-            case 1 -> Cli.userGreeting();
-            case 2 -> EvenGame.gameLogic();
-            case 3 -> Calc.gameLogic();
-            case 4 -> GCD.gameLogic();
-            case 5 -> Progression.gameLogic();
-            case 6 -> Prime.gameLogic();
+            case STAT_GREET -> System.console();
+            case STAT_EVEN -> Cli.userGreeting();
+            case STAT_CALC -> EvenGame.gameLogic();
+            case STAT_GCD -> Calc.gameLogic();
+            case STAT_PROGRESSION -> GCD.gameLogic();
+            case STAT_PRIME -> Progression.gameLogic();
+            case STAT_EXIT -> Prime.gameLogic();
             default -> System.console();
         }
     }
@@ -46,7 +54,7 @@ public class Engine {
         }
         return a;
     }
-    public static String getUserName(){
+    public static String getUserName() {
         return userName;
     }
     public static int getMaxQuestions() {
