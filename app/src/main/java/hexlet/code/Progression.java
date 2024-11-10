@@ -40,7 +40,7 @@ public class Progression {
                         "Correct answer was" + "'" + hideElement + "'");
             }
             if(Engine.questionCounter == 3) {
-                System.out.println("Congratulations! " + Engine.userName);
+                System.out.println("Congratulations, " + Engine.userName + "!");
             }
         }
 
