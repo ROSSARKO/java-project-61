@@ -14,7 +14,7 @@ public class Engine {
     }
     public static void selectGame() {
         String[] gamesList = {"1 - Greet", "2 - Even", "3 - Calc", "4 - GCD",
-                "5 - Progression", "0 - Exit"};
+                "5 - Progression", "6 - Prime", "0 - Exit"};
         Scanner sc = new Scanner(System.in);
         String formattedGamesList = Arrays.toString(gamesList)
                 .replace("[","")
@@ -36,6 +36,8 @@ public class Engine {
             case 4: GCD.gameLogic();
                 break;
             case 5: Progression.gameLogic();
+                break;
+            case 6: Prime.gameLogic();
                 break;
         }
     }
