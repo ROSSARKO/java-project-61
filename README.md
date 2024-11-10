@@ -1,5 +1,4 @@
-[![Maintainability]
-(https://api.codeclimate.com/v1/bdges/9dbe00b836c00492e34b/maintainability)](https://codeclimate.com/github/ROSSARKO/java-project-61/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/9dbe00b836c00492e34b/maintainability)](https://codeclimate.com/github/ROSSARKO/java-project-61/maintainability)
 
 
 Video: EvenGame
