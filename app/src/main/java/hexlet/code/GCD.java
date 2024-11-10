@@ -25,7 +25,7 @@ public class GCD {
                         + "Correct answer was" + "'" + result + "'");
             }
             if (Engine.questionCounter == 3) {
-                System.out.println("Congratulations! " + Engine.userName);
+                System.out.println("Congratulations, " + Engine.userName + "!");
             }
         }
     }
