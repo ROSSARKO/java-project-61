@@ -7,3 +7,5 @@ Video: GCD
 https://asciinema.org/a/egT7j4lie7pqZfF5hKfNLVjDy
 Video: Progression
 https://asciinema.org/a/yHUW0ER66ENJNQpuoWibP75ak
+Video: Prime
+https://asciinema.org/a/YrgJKHpNr4ZrwLZIxThIBqsow
