@@ -38,6 +38,7 @@ public class Progression {
                 System.out.println("Your answer: " + answer);
                 System.out.println("'" + answer + "'" + "is wrong answer ;(. "
                         + "Correct answer was" + "'" + hideElement + "'");
+                System.out.println("Let's try again, " + Engine.userName + "!");
                 break;
             }
             if (Engine.questionCounter == 3) {
