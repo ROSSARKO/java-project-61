@@ -13,7 +13,7 @@ public class Engine {
         System.out.println("Hello " + userName + "\n");
     }
     public static void selectGame() {
-        String[] gamesList = {"1 - Greet", "2 - Even", "3 - Calc", "0 - Exit"};
+        String[] gamesList = {"1 - Greet", "2 - Even", "3 - Calc", "4 - GCD", "0 - Exit"};
         Scanner sc = new Scanner(System.in);
         String formattedGamesList = Arrays.toString(gamesList)
                 .replace("[","")
@@ -32,6 +32,16 @@ public class Engine {
                 break;
             case 3: Calc.gameLogic();
                 break;
+            case 4: GCD.gameLogic();
+                break;
         }
+    }
+    public static int gcdGenerate(int a, int b) {
+        while (b != 0) {
+            int temp = a % b;
+            a = b;
+            b = temp;
+        }
+        return a;
     }
 }
