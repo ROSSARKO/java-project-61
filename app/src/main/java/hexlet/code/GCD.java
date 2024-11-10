@@ -15,16 +15,16 @@ public class GCD {
             int num2 = randNum.nextInt(100);
             System.out.println("Question: " + num1 + " " + num2);
             int answer = sc.nextInt();
-            result = Engine.gcdGenerate(num1,num2);
+            result = Engine.gcdGenerate(num1, num2);
             if (answer == result) {
                 System.out.println("Correct!\n");
                 Engine.questionCounter++;
             } else {
                 System.out.println("Your answer: " + answer);
-                System.out.println("'" + answer + "'" + "is wrong answer ;(. " +
-                        "Correct answer was" + "'" + result + "'");
+                System.out.println("'" + answer + "'" + "is wrong answer ;(. "
+                        + "Correct answer was" + "'" + result + "'");
             }
-            if(Engine.questionCounter == 3) {
+            if (Engine.questionCounter == 3) {
                 System.out.println("Congratulations! " + Engine.userName);
             }
         }
