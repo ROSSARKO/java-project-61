@@ -11,7 +11,7 @@ public class Engine {
     private static final int STAT_EVEN = 1;
     private static final int STAT_CALC = 2;
     private static final int STAT_GCD = 3;
-    private static final int STAT_PROGRESSION= 4;
+    private static final int STAT_PROGRESSION = 4;
     private static final int STAT_PRIME = 5;
     private static final int STAT_EXIT = 6;
 
@@ -24,7 +24,7 @@ public class Engine {
 
     public static void selectGame() {
         String[] gamesList = {"1 - Greet", "2 - Even", "3 - Calc", "4 - GCD",
-                "5 - Progression", "6 - Prime", "0 - Exit"};
+            "5 - Progression", "6 - Prime", "0 - Exit"};
         Scanner sc = new Scanner(System.in);
         String formattedGamesList = Arrays.toString(gamesList)
                 .replace("[", "")
@@ -54,15 +54,19 @@ public class Engine {
         }
         return a;
     }
+
     public static String getUserName() {
         return userName;
     }
+
     public static int getMaxQuestions() {
         return MAX_QUESTIONS;
     }
+
     public static int getQuestionCounter() {
         return questionCounter;
     }
+
     public static void incrementQuestionsCounter() {
         questionCounter++;
     }
