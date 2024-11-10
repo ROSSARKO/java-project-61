@@ -55,9 +55,6 @@ public class Engine {
     public static int getQuestionCounter() {
         return questionCounter;
     }
-    public static void setQuestionCounter(int newValue) {
-        questionCounter = newValue;
-    }
     public static void incrementQuestionsCounter() {
         questionCounter++;
     }
