@@ -15,7 +15,7 @@ public class Calc {
             int randMathSymbol = randNum.nextInt(3);
             int num1 = randNum.nextInt(100);
             int num2 = randNum.nextInt(100);
-            System.out.println("Question: " + num1 + mathSymbols[randMathSymbol] + num2);
+            System.out.println("Question: " + num1 + " " + mathSymbols[randMathSymbol] + " " + num2);
             result = switch (mathSymbols[randMathSymbol]) {
                 case '+' -> num1 + num2;
                 case '-' -> num1 - num2;
