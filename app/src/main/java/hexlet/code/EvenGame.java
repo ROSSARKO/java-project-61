@@ -7,7 +7,7 @@ public class EvenGame {
         Scanner sc = new Scanner(System.in);
         Engine.userGreetings();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        while (Engine.questionCounter != 3) {
+        while (Engine.questionCounter != Engine.MAX_QUESTIONS) {
             Random rand = new Random();
             int randNum = rand.nextInt(100);
             System.out.println("Question: " + randNum);
@@ -23,7 +23,7 @@ public class EvenGame {
                 System.out.println("Let's try again, " + Engine.userName + "!");
                 break;
             }
-            if (Engine.questionCounter == 3) {
+            if (Engine.questionCounter == Engine.MAX_QUESTIONS) {
                 System.out.println("Congratulations, " + Engine.userName + "!");
             }
         }

@@ -5,14 +5,15 @@ import java.util.Scanner;
 
 public class GCD {
     public static void gameLogic() {
+        final int MAX_VALUE = 100;
         Engine.userGreetings();
         System.out.println("Find the greatest common divisor of given numbers.");
         Scanner sc = new Scanner(System.in);
         int result;
-        while (Engine.questionCounter != 3) {
+        while (Engine.questionCounter != Engine.MAX_QUESTIONS) {
             Random randNum = new Random();
-            int num1 = randNum.nextInt(100);
-            int num2 = randNum.nextInt(100);
+            int num1 = randNum.nextInt(MAX_VALUE);
+            int num2 = randNum.nextInt(MAX_VALUE);
             System.out.println("Question: " + num1 + " " + num2);
             int answer = sc.nextInt();
             result = Engine.gcdGenerate(num1, num2);
@@ -26,7 +27,7 @@ public class GCD {
                 System.out.println("Let's try again, " + Engine.userName + "!");
                 break;
             }
-            if (Engine.questionCounter == 3) {
+            if (Engine.questionCounter == Engine.MAX_QUESTIONS) {
                 System.out.println("Congratulations, " + Engine.userName + "!");
             }
         }

@@ -5,16 +5,20 @@ import java.util.Scanner;
 
 public class Progression {
     public static void gameLogic() {
+        final int ARR_LENGTH = 10;
+        final int STEP_MAX = 10;
+        final int HIDE_ELEMENT_MAX = 9;
+        final int FIRST_NUM_MAX = 100;
         Scanner sc = new Scanner(System.in);
-        int[] progression = new int[10];
+        int[] progression = new int[ARR_LENGTH];
         Random randNum = new Random();
 
         Engine.userGreetings();
         System.out.println("What number is missing in the progression?");
-        while (Engine.questionCounter != 3) {
-            int progressionStep = randNum.nextInt(1, 10);
-            int randHideElement = randNum.nextInt(0, 9);
-            int firstNum = randNum.nextInt(1, 100);
+        while (Engine.questionCounter != Engine.MAX_QUESTIONS) {
+            int progressionStep = randNum.nextInt(1, STEP_MAX);
+            int randHideElement = randNum.nextInt(0, HIDE_ELEMENT_MAX);
+            int firstNum = randNum.nextInt(1, FIRST_NUM_MAX);
             progression[0] = firstNum;
             for (int i = 1; i < progression.length; i++) {
                 progression[i] = progression[i - 1] + progressionStep;
@@ -41,7 +45,7 @@ public class Progression {
                 System.out.println("Let's try again, " + Engine.userName + "!");
                 break;
             }
-            if (Engine.questionCounter == 3) {
+            if (Engine.questionCounter == Engine.MAX_QUESTIONS) {
                 System.out.println("Congratulations, " + Engine.userName + "!");
             }
         }

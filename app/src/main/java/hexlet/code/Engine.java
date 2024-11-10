@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Engine {
     public static String userName = "";
     public static int questionCounter = 0;
+    public static final int MAX_QUESTIONS = 3;
 
     public static void userGreetings() {
         Scanner sc = new Scanner(System.in);
