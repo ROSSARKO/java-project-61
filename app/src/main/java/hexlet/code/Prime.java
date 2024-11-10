@@ -12,6 +12,7 @@ public class Prime {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         while (Engine.questionCounter != 3) {
             int num = randNum.nextInt(2, 1000);
+            isPrime = true;
             System.out.println("Question: " + num);
             for (int i = 2; i <= Math.sqrt(num); i++) {
                 if (num % i == 0) {
