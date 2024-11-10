@@ -1,9 +1,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/9dbe00b836c00492e34b/maintainability)](https://codeclimate.com/github/ROSSARKO/java-project-61/maintainability)
 ## Start
-
-'''bash
-make
-'''
+```bash
+make run-dist
+```
 
 Video: EvenGame
 https://asciinema.org/connect/6da9d564-f8ad-47e0-98eb-dc7efdeb7227
