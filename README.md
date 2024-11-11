@@ -1,4 +1,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/9dbe00b836c00492e34b/maintainability)](https://codeclimate.com/github/ROSSARKO/java-project-61/maintainability)
+[![hexlet-check](https://github.com/ROSSARKO/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/ROSSARKO/java-project-61/actions/workflows/hexlet-check.yml)
 ## Start
 ```bash
 make run-dist
