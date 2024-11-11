@@ -1,55 +1,43 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+
 import java.util.Random;
-import java.util.Scanner;
 
 public class Progression {
-    public static void gameLogic() {
+    public static void startGame() {
         final int arrLength = 10;
         final int stepMax = 10;
         final int hideElementMax = 9;
         final int firstNumMax = 100;
-        Scanner sc = new Scanner(System.in);
-        int[] progression = new int[arrLength];
+        String[][] roundsData = new String[Engine.ROUNDS][2];
         Random randNum = new Random();
+        String description = "What number is missing in the progression?";
 
-        Engine.userGreetings();
-        System.out.println("What number is missing in the progression?");
-        while (Engine.getQuestionCounter() != Engine.getMaxQuestions()) {
+        for (int i = 0; i < Engine.ROUNDS; i++) {
             int progressionStep = randNum.nextInt(1, stepMax);
             int randHideElement = randNum.nextInt(0, hideElementMax);
             int firstNum = randNum.nextInt(1, firstNumMax);
+
+            int[] progression = new int[arrLength];
             progression[0] = firstNum;
-            for (int i = 1; i < progression.length; i++) {
-                progression[i] = progression[i - 1] + progressionStep;
+            for (int j = 1; j < progression.length; j++) {
+                progression[j] = progression[j - 1] + progressionStep;
             }
-            int hideElement = progression[randHideElement];
+
             String[] progressionWithDots = new String[progression.length];
-            for (int i = 0; i < progression.length; i++) {
-                if (i == randHideElement) {
-                    progressionWithDots[i] = "..";
+
+            for (int k = 0; k < progression.length; k++) {
+                if (k == randHideElement) {
+                    progressionWithDots[k] = "..";
                 } else {
-                    progressionWithDots[i] = String.valueOf(progression[i]);
+                    progressionWithDots[k] = String.valueOf(progression[k]);
                 }
             }
-            System.out.println("Question: " + String.join(" ", progressionWithDots));
-            int answer = sc.nextInt();
-
-            if (answer == hideElement) {
-                System.out.println("Correct!\n");
-                Engine.incrementQuestionsCounter();
-            } else {
-                System.out.println("Your answer: " + answer);
-                System.out.println("'" + answer + "'" + "is wrong answer ;(. "
-                        + "Correct answer was" + "'" + hideElement + "'");
-                System.out.println("Let's try again, " + Engine.getUserName() + "!");
-                break;
-            }
-            if (Engine.getQuestionCounter() == Engine.getMaxQuestions()) {
-                System.out.println("Congratulations, " + Engine.getUserName() + "!");
-            }
+            String question = String.join(" ", progressionWithDots);
+            roundsData[i][0] = question;
+            roundsData[i][1] = String.valueOf(progression[randHideElement]);
         }
-
+        Engine.run(description, roundsData);
     }
 }
