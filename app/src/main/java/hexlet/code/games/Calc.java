@@ -11,10 +11,11 @@ public class Calc {
         for (int i = 0; i < Engine.ROUNDS; i++) {
             int num1 = Utils.generateNumber(0, 100);
             int num2 = Utils.generateNumber(0, 100);
+            char mathSymbol = getRandomMathSymbol();
 
-            String question = num1 + " " + getRandomMathSymbol() + " " + num2;
+            String question = num1 + " " + mathSymbol + " " + num2;
 
-            int result = switch (getRandomMathSymbol()) {
+            int result = switch (mathSymbol) {
                 case '+' -> num1 + num2;
                 case '-' -> num1 - num2;
                 case '*' -> num1 * num2;
