@@ -1,19 +1,16 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class GCD {
     public static void startGame() {
-        final int maxValue = 100;
         String[][] roundsData = new String[Engine.ROUNDS][2];
         String description = "Find the greatest common divisor of given numbers.";
-        Random randNum = new Random();
 
         for (int i = 0; i < Engine.ROUNDS; i++) {
-            int num1 = randNum.nextInt(maxValue);
-            int num2 = randNum.nextInt(maxValue);
+            int num1 = Utils.generateNumber(0, 100);
+            int num2 = Utils.generateNumber(0, 100);
             String question = num1 + " " + num2;
             int result = gcdCalculate(num1, num2);
             roundsData[i][0] = question;
