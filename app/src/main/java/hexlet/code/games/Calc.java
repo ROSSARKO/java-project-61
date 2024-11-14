@@ -1,27 +1,20 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Random;
-
+import hexlet.code.Utils;
 
 public class Calc {
     public static void startGame() {
-        final int rndMax = 100;
-        final int mathSymbolMax = 3;
-        char[] mathSymbols = {'+', '-', '*'};
         String[][] roundsData = new String[Engine.ROUNDS][2];
         String description = "What is the result of the expression?";
-        Random randNum = new Random();
 
         for (int i = 0; i < Engine.ROUNDS; i++) {
-            int randMathSymbol = randNum.nextInt(mathSymbolMax);
-            int num1 = randNum.nextInt(rndMax);
-            int num2 = randNum.nextInt(rndMax);
+            int num1 = Utils.generateNumber(0, 100);
+            int num2 = Utils.generateNumber(0, 100);
 
-            String question = num1 + " " + mathSymbols[randMathSymbol] + " " + num2;
+            String question = num1 + " " + getRandomMathSymbol() + " " + num2;
 
-            int result = switch (mathSymbols[randMathSymbol]) {
+            int result = switch (getRandomMathSymbol()) {
                 case '+' -> num1 + num2;
                 case '-' -> num1 - num2;
                 case '*' -> num1 * num2;
@@ -32,5 +25,11 @@ public class Calc {
             roundsData[i][1] = String.valueOf(result);
         }
         Engine.run(description, roundsData);
+    }
+
+    private static char getRandomMathSymbol() {
+        char[] mathSymbols = {'+', '-', '*'};
+        int index = Utils.generateNumber(0, 2);
+        return mathSymbols[index];
     }
 }
