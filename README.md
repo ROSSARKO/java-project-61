@@ -3,8 +3,8 @@
 ## Description
 ***
 ```
-"The Brain Games" - This app contains several math games in it. If you answer 3 questions correctly, you win. Otherwise,
-The game ends and you will need to start over.
+"The Brain Games" - This app contains several math games in it. If you answer 3 questions correctly, you win. 
+Otherwise, the game ends and you will need to start over.
 ```
 ***
 ## Demo:
