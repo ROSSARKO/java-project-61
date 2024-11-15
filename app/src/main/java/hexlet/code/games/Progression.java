@@ -5,37 +5,30 @@ import hexlet.code.Utils;
 
 public class Progression {
     public static void startGame() {
+        final int PROGRESSION_LENGTH = 10;
         String[][] roundsData = new String[Engine.ROUNDS][2];
         String description = "What number is missing in the progression?";
 
         for (int i = 0; i < Engine.ROUNDS; i++) {
-            int[] progression = getProgression();
-            int randHideElement = Utils.generateNumber(0, 9);
-            String[] progressionWithDots = new String[progression.length];
+            String[] progression = makeProgression(
+                Utils.generateNumber(1, 100),
+                Utils.generateNumber(1, 10), PROGRESSION_LENGTH);
+            int hiddenMemberIndex = Utils.generateNumber(0, 9);
+            String answer = progression[hiddenMemberIndex];
 
-            for (int k = 0; k < progression.length; k++) {
-                if (k == randHideElement) {
-                    progressionWithDots[k] = "..";
-                } else {
-                    progressionWithDots[k] = String.valueOf(progression[k]);
-                }
-            }
-            String question = String.join(" ", progressionWithDots);
+            progression[hiddenMemberIndex] = "..";
+            String question = String.join(" ", progression);
+
             roundsData[i][0] = question;
-            roundsData[i][1] = String.valueOf(progression[randHideElement]);
+            roundsData[i][1] = answer;
         }
         Engine.run(description, roundsData);
     }
 
-    private static int[] getProgression() {
-        final int arrLength = 10;
-        int progressionStep = Utils.generateNumber(1, 10);
-        int firstNum = Utils.generateNumber(1, 100);
-
-        int[] progression = new int[arrLength];
-        progression[0] = firstNum;
-        for (int j = 1; j < progression.length; j++) {
-            progression[j] = progression[j - 1] + progressionStep;
+    private static String[] makeProgression(int first, int step, int length) {
+        String[] progression = new String[length];
+        for (int i = 0; i < length; i++) {
+            progression[i] = Integer.toString(first + i * step);
         }
         return progression;
     }
