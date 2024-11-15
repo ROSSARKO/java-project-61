@@ -9,8 +9,8 @@ public class Progression {
     private static final int STEP_MAX = 10;
     private static final int FIRST_NUM_MIN = 1;
     private static final int FIRST_NUM_MAX = 100;
-    private static final int HIDDEN_MIN = 1;
-    private static final int HIDDEN_MAX = 10;
+    private static final int HIDDEN_MIN = 0;
+    private static final int HIDDEN_MAX = 9;
     public static void startGame() {
 
 
