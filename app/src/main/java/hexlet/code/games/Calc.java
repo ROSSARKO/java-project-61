@@ -15,15 +15,8 @@ public class Calc {
 
             String question = num1 + " " + mathSymbol + " " + num2;
 
-            int result = switch (mathSymbol) {
-                case '+' -> num1 + num2;
-                case '-' -> num1 - num2;
-                case '*' -> num1 * num2;
-                default -> 0;
-            };
-
             roundsData[i][0] = question;
-            roundsData[i][1] = String.valueOf(result);
+            roundsData[i][1] = String.valueOf(getExpressionResult(mathSymbol, num1, num2));
         }
         Engine.run(description, roundsData);
     }
@@ -32,5 +25,14 @@ public class Calc {
         char[] mathSymbols = {'+', '-', '*'};
         int index = Utils.generateNumber(0, 2);
         return mathSymbols[index];
+    }
+
+    private static int getExpressionResult(char mathSymbol, int numOne, int numTwo) {
+        return switch (mathSymbol) {
+            case '+' -> numOne + numTwo;
+            case '-' -> numOne - numTwo;
+            case '*' -> numOne * numTwo;
+            default -> 0;
+        };
     }
 }
