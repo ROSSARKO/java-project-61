@@ -4,16 +4,24 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression {
+    private static final int PROGRESSION_LENGTH = 10;
+    private static final int STEP_MIN = 1;
+    private static final int STEP_MAX = 10;
+    private static final int FIRST_NUM_MIN = 1;
+    private static final int FIRST_NUM_MAX = 100;
+    private static final int HIDDEN_MIN = 1;
+    private static final int HIDDEN_MAX = 10;
     public static void startGame() {
-        final int PROGRESSION_LENGTH = 10;
+
+
         String[][] roundsData = new String[Engine.ROUNDS][2];
         String description = "What number is missing in the progression?";
 
         for (int i = 0; i < Engine.ROUNDS; i++) {
             String[] progression = makeProgression(
-                Utils.generateNumber(1, 100),
-                Utils.generateNumber(1, 10), PROGRESSION_LENGTH);
-            int hiddenMemberIndex = Utils.generateNumber(0, 9);
+                Utils.generateNumber(FIRST_NUM_MIN, FIRST_NUM_MAX),
+                Utils.generateNumber(STEP_MIN, STEP_MAX), PROGRESSION_LENGTH);
+            int hiddenMemberIndex = Utils.generateNumber(HIDDEN_MIN, HIDDEN_MAX);
             String answer = progression[hiddenMemberIndex];
 
             progression[hiddenMemberIndex] = "..";

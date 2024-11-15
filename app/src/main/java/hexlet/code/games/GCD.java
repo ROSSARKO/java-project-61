@@ -4,13 +4,16 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class GCD {
+    private static final int MIN = 0;
+    private static final int MAX = 100;
     public static void startGame() {
+
         String[][] roundsData = new String[Engine.ROUNDS][2];
         String description = "Find the greatest common divisor of given numbers.";
 
         for (int i = 0; i < Engine.ROUNDS; i++) {
-            int num1 = Utils.generateNumber(0, 100);
-            int num2 = Utils.generateNumber(0, 100);
+            int num1 = Utils.generateNumber(MIN, MAX);
+            int num2 = Utils.generateNumber(MIN, MAX);
             String question = num1 + " " + num2;
             int result = gcdCalculate(num1, num2);
             roundsData[i][0] = question;
