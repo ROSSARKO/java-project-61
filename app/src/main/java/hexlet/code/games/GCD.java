@@ -6,6 +6,7 @@ import hexlet.code.Utils;
 public class GCD {
     private static final int MIN = 0;
     private static final int MAX = 100;
+
     public static void startGame() {
 
         String[][] roundsData = new String[Engine.ROUNDS][2];

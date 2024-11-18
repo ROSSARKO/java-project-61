@@ -11,8 +11,8 @@ public class Progression {
     private static final int FIRST_NUM_MAX = 100;
     private static final int HIDDEN_MIN = 0;
     private static final int HIDDEN_MAX = 9;
-    public static void startGame() {
 
+    public static void startGame() {
 
         String[][] roundsData = new String[Engine.ROUNDS][2];
         String description = "What number is missing in the progression?";
