@@ -18,7 +18,7 @@ __[Prime](https://asciinema.org/a/YrgJKHpNr4ZrwLZIxThIBqsow)__ |
 ```bash
 make build
 ```
-## Start
+## Run
 ```bash
 make run-dist
 ```
